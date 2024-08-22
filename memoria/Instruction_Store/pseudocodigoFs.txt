@@ -1,0 +1,10 @@
+SET AX 65
+SET BX 1
+SET CX 5
+SET DX 8
+RESIZE 256
+IO_FS_CREATE Int4 notas.txt
+IO_FS_TRUNCATE Int4 notas.txt AX
+IO_FS_WRITE Int4 notas.txt BX CX DX
+IO_FS_READ Int4 notas.txt BX CX DX
+EXIT
